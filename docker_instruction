@@ -56,6 +56,14 @@ docker stats <containerID|containerName>
 
 docker top <containerID|containerName>
 
+# 打包镜像
+
+docker save -o xxx.tar xxx:镜像名称
+
+# 加载镜像
+
+docker load -i xxx.tar 会重新加载一个xxx镜像,需要run生成容器
+
 
 1 docker build -t dockername . --生成docker image
 2 docker images 
@@ -65,4 +73,3 @@ docker top <containerID|containerName>
 6 docker docker rm -f container_id或container_name
 7 docker rmi -f image
 8 docker logs container_id --查看容器日志
-9 重新打镜像
